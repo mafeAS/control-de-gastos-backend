@@ -13,6 +13,7 @@ Route::middleware('auth:sanctum')->group(function(){//Aqui el usuario tiene que 
     });
 
     Route::get('/configuracion', [ConfiguracionController::class, 'verificarConfiguracion']);
+    Route::post('/crearConfiguracion',[ConfiguracionController::class, 'crearConfiguracionUsuario']);
     Route::post('/logout',[AuthController::class,'logout']);
 });
 
